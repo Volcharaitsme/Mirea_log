@@ -2,12 +2,12 @@ from typing import Union
 
 from fastapi import FastAPI
 
-from routers.items import router as item_router
+from routers.bookings import router as booking_router
 
 app = FastAPI()
 
 
 app.include_router(
-    router=item_router,
-    prefix='/items',
+    router=booking_router,
+    prefix='/bookings',
 )
